@@ -1,6 +1,6 @@
 ## API iBank
 
-###Routers URLS
+###### Routers URLS
 
 >In this api you have to set two header as listed below:
 
@@ -52,7 +52,7 @@ X-Requested-With: XMLHttpRequest
  - Method: DELETE 
  - URL:http://localhost:8000/api/products/{id}
 
-##Errors
+## Errors
 
 I have this same problem:
 ```

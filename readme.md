@@ -1,6 +1,6 @@
 ## API iBank
 
-Primeiramente criei um usuario, após isso excute:
+Primeiramente criei um usuario, após isso execute:
 
 ```
 php artisan db:seed

@@ -59,10 +59,9 @@ X-Requested-With: XMLHttpRequest
 4. Create:
  - Method: POST
  - URL: http://localhost:8000/api/products
- 
  - Example:
  \
-<img src="https://i.ibb.co/mhmXBkV/Screenshot-at-Aug-26-16-31-31.png" alt="Screenshot-at-Aug-26-16-31-31" border="0">
+<img src="https://i.ibb.co/HFQcBYv/Screenshot-at-Aug-26-17-00-11.png" alt="Screenshot-at-Aug-26-17-00-11" border="0">
 
 5. Show: 
  - Method: GET
@@ -75,10 +74,16 @@ X-Requested-With: XMLHttpRequest
 6. Update: 
  - Method: PUT
  - URL:http://localhost:8000/api/products/{id}
+ - Example:
+ \
+ <img src="https://i.ibb.co/DV0r43K/Screenshot-at-Aug-26-17-01-58.png" alt="Screenshot-at-Aug-26-17-01-58" border="0">
 
 7. Delete:
  - Method: DELETE 
  - URL:http://localhost:8000/api/products/{id}
+ - Example:
+ \
+ <img src="https://i.ibb.co/bzL0vxM/Screenshot-at-Aug-26-17-04-14.png" alt="Screenshot-at-Aug-26-17-04-14" border="0">
 
 ## Errors
 

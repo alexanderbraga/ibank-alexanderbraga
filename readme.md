@@ -56,6 +56,8 @@ X-Requested-With: XMLHttpRequest
 4. Create:
  - Method: POST
  - URL: http://localhost:8000/api/products
+ 
+ 
 
 5. Show: 
  - Method: GET

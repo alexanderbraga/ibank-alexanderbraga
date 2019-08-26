@@ -17,6 +17,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/', 'Web\HomeController@index')->name('home');
     Route::get('/home', 'Web\HomeController@index')->name('home');
 
+    Route::resource('products','Web\ProductController');
     Route::get('products', 'Web\ProductController@index');
     Route::post('product', 'Web\ProductController@create');
     Route::delete('{id}/products', 'Web\ProductController@delete');

@@ -1,14 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers\Api;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-use App\Services\ProductService;
 use App\Http\Controllers\Api\ApiController as ApiController;
 use Validator;
 
 
+/**
+ * Class ProductController
+ * @package App\Http\Controllers\Api
+ */
 class ProductController extends ApiController
 {
     /**
@@ -28,6 +31,7 @@ class ProductController extends ApiController
     /**
      * Store a newly created resource in storage.
      *
+     * @param Product
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
@@ -37,15 +41,16 @@ class ProductController extends ApiController
 
 
         $validator = Validator::make($input, [
-            'name' => 'required',
-            'detail' => 'required'
+            'title' => 'required',
+            'price' => 'required',
+            'quantity' => 'required',
+            'user_id' => auth()->id(),
         ]);
 
 
         if ($validator->fails()) {
             return $this->sendError('Validation Error.', $validator->errors());
         }
-
 
         $product = Product::create($input);
 
@@ -77,10 +82,12 @@ class ProductController extends ApiController
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
      * @param int $id
+     * @param Request $request
+     * @param Product $product
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, Product $product)
     {
         $input = $request->all();

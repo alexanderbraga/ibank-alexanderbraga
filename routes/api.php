@@ -17,5 +17,6 @@ Route::group([
 });
 
 Route::middleware('auth:api')->group( function () {
+
     Route::resource('products', 'Api\ProductController');
 });

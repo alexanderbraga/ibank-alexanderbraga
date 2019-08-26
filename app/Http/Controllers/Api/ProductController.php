@@ -59,6 +59,10 @@ class ProductController extends ApiController
         $product->user_id = Auth::user()->id;
         $product->save();
 
+        if($product->save()){
+            return$this->sendError('Create Error.', $validator->errors());
+        }
+
 
         return $this->sendResponse($product->toArray(), 'Product created successfully.');
     }
@@ -109,8 +113,10 @@ class ProductController extends ApiController
         }
 
 
-        $product->name = $input['name'];
-        $product->detail = $input['detail'];
+        $product = new Product();
+        $product->title = $request->title;
+        $product->price = $request->price;
+        $product->quantity = $request->quantity;
         $product->save();
 
 

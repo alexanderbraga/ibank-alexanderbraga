@@ -1,12 +1,14 @@
 ## API iBank
 
-Primeiramente criei um usuario, após isso execute:
+Primeiramente criei um usuario, após isso execute:\
+_First I created user, after that run:._
 
 ```
 php artisan db:seed
 ```
 
-Instalar o Passport
+Após instalar o Passport\
+_After installing Passport_
 
 ```
 php artisan passport:install
@@ -14,13 +16,15 @@ php artisan passport:install
 
 ###### Routers URLS
 
->In this api you have to set two header as listed below:
+Nesta API você deve definir dois Headers conforme listado abaixo:\
+_In this api you have to set two header as listed below:_
 
 ```
 Content-Type: application/json
 X-Requested-With: XMLHttpRequest
 ```
 <img src="https://i.ibb.co/7WVpv1x/Screenshot-33.png">
+
 
 1. Singup
  - Method: POST
@@ -66,15 +70,20 @@ X-Requested-With: XMLHttpRequest
 
 ## Errors
 
-I have this same problem:
+Problema comum se executar **migrate:fresh**
+\
+_Common problem if you run **migrate:fresh**_
 ```
 “message”: “Personal access client not found. Please create one.”,
 “exception”: “RuntimeException”,
 "file": "W:\\labs\\ibank\\vendor\\laravel\\passport\\src\\ClientRepository.php",
 "line": 95,
 ``` 
-It occurs because the client for the API doesn't exists, maybe you removed it from the database when you ran the migrations refresh or something like that.
-You can create again the API clients manually or simply re-run the command:
+Isso ocorre porque o cliente da API não existe, talvez você o tenha removido do banco de dados quando executou a 
+atualização de migrações ou algo parecido. Você pode criar novamente os clientes da API manualmente ou simplesmente executar novamente o comando:
+\
+_It occurs because the client for the API doesn't exists, maybe you removed it from the database when you ran the 
+migrations refresh or something like that.You can create again the API clients manually or simply re-run the command:_
 
 ````
 php artisan passport:install

@@ -1,8 +1,28 @@
 ## API iBank
 
-Client ID: 1
-Client secret: gKnjXvuv6KCpIAAtRiB78BiXWEhK3Ig6ma5BaCjA
+###Routers URLS
 
-Client ID: 2
-Client secret: MhzWdMn0rQQZ1Unbc7ePBPT8yjW7LW1Ocd4EJlCJ
 
+1) Singup
+ - Method: POST
+ - URL: http://localhost:8000/api/auth/signup
+
+2. List: 
+ - Verb: GET 
+ - URL: http://localhost:8000/api/products
+
+4) Create:
+ - Verb: POST
+ - URL: http://localhost:8000/api/products
+
+5) Show: 
+ - Verb:GET
+ - URL:http://localhost:8000/api/products/{id}
+
+6) Update: 
+ - Verb:PUT
+ - URL:http://localhost:8000/api/products/{id}
+
+7) Delete:
+ - Verb:DELETE 
+ - URL:http://localhost:8000/api/products/{id}

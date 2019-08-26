@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes();
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/', 'Web\HomeController@index')->name('home');
+    Route::get('/home', 'Web\HomeController@index')->name('home');
+
+    Route::get('products', 'Web\ProductController@index');
+    Route::post('product', 'Web\ProductController@create');
+    Route::delete('{id}/products', 'Web\ProductController@delete');
 });

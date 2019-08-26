@@ -6,7 +6,7 @@
         @csrf
         <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
-
+        <p>Ainda não tem conta? <a title="Cadastre-se!" href="{{ route('register') }}">Cadastre-se!</a></p>
         <label for="inputEmail" class="sr-only">Endereço de email</label>
         <input type="email" id="inputEmail" class="form-control @error('email') is-invalid @enderror" name="email"
                placeholder="Seu email" value="{{ old('email') }}" required autocomplete="email" autofocus>

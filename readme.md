@@ -1,13 +1,13 @@
 ## APP iBank
 
 Primeiramente criei um usuario, após isso execute:\
-_First I created user, after that run:._
+_First I created user, after that run:_
 
 ```
 php artisan db:seed
 ```
 
-Após instalar o Passport\
+Após faça a instalação do Passport\
 _After installing Passport_
 
 ```
@@ -30,16 +30,14 @@ X-Requested-With: XMLHttpRequest
 1. Singup
  - Method: POST
  - URL: http://localhost:8000/api/auth/signup
-
-<img src="https://i.ibb.co/Zmgmt7M/Screenshot-34.png" alt="Screenshot-34" border="0">
+ <img src="https://i.ibb.co/Zmgmt7M/Screenshot-34.png" alt="Screenshot-34" border="0">
 
 </br>
 
 2. Login
  - Method: POST
  - URL: http://localhost:8000/api/auth/login
-
-<img src="https://i.ibb.co/WvyMktq/Screenshot-33.png" alt="Screenshot-33" border="0"></a><br /><br />
+ <img src="https://i.ibb.co/WvyMktq/Screenshot-33.png" alt="Screenshot-33" border="0"></a><br /><br />
 
 
 ````

@@ -52,16 +52,25 @@ X-Requested-With: XMLHttpRequest
 3. List: 
  - Method: GET 
  - URL: http://localhost:8000/api/products
+ - Example:
+  \
+<img src="https://i.ibb.co/gdBzwb4/Screenshot-at-Aug-26-16-34-08.png" alt="Screenshot-at-Aug-26-16-34-08" border="0">
 
 4. Create:
  - Method: POST
  - URL: http://localhost:8000/api/products
  
- 
+ - Example:
+ \
+<img src="https://i.ibb.co/mhmXBkV/Screenshot-at-Aug-26-16-31-31.png" alt="Screenshot-at-Aug-26-16-31-31" border="0">
 
 5. Show: 
  - Method: GET
  - URL:http://localhost:8000/api/products/{id}
+ - Example:
+  \
+<img src="https://i.ibb.co/qFxrF6k/Screenshot-at-Aug-26-16-36-06.png" alt="Screenshot-at-Aug-26-16-36-06" border="0">
+
 
 6. Update: 
  - Method: PUT

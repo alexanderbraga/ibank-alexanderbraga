@@ -59,8 +59,8 @@ class ProductController extends ApiController
         $product->user_id = Auth::user()->id;
         $product->save();
 
-        if(!$product->save()){
-            return$this->sendError('Create Error.', $validator->errors());
+        if (!$product->save()) {
+            return $this->sendError('Create Error.', $validator->errors());
         }
 
 
@@ -99,25 +99,18 @@ class ProductController extends ApiController
 
     public function update(Request $request, Product $product)
     {
-        $input = $request->all();
+        $product = Product::find($product->id);
 
-
-        $validator = Validator::make($input, [
-            'name' => 'required',
-            'detail' => 'required'
-        ]);
-
-
-        if ($validator->fails()) {
-            return $this->sendError('Validation Error.', $validator->errors());
+        if (is_null($product)) {
+            return $this->sendError('Product not found.');
         }
 
-
-        $product = new Product();
-        $product->title = $request->title;
-        $product->price = $request->price;
-        $product->quantity = $request->quantity;
-        $product->save();
+        $updateProduct = Product::find($product->id);;
+        $updateProduct->title = (!empty($request->title) ? $request->title : $product->title);
+        $updateProduct->price = (!empty($request->price) ? $request->price : $product->price);
+        $updateProduct->quantity = (!empty($request->quantity) ? $request->quantity : $product->quantity);
+        $updateProduct->user_id = Auth::user()->id;
+        $updateProduct->save();
 
 
         return $this->sendResponse($product->toArray(), 'Product updated successfully.');

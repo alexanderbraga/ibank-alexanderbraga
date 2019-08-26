@@ -15,7 +15,6 @@ class ProductController extends Controller
         $products = Product::all();
 
         var_dump($products);
-        return $products->toArray() ?? [];
     }
 
     public function show(Product $product)
@@ -25,7 +24,7 @@ class ProductController extends Controller
 
     public function store()
     {
-//
+
     }
 
     public function edit(Product $product)
@@ -35,11 +34,11 @@ class ProductController extends Controller
 
     public function update(Product $product, Request $request)
     {
-//
+
     }
 
     public function destroy(Product $product)
     {
-//
+
     }
 }

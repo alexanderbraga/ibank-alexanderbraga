@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Api\ApiController as ApiController;
-use Validator;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 
 /**
@@ -39,12 +40,10 @@ class ProductController extends ApiController
     {
         $input = $request->all();
 
-
-        $validator = Validator::make($input, [
+        $validator = Validator::make($request->all(), [
             'title' => 'required',
             'price' => 'required',
-            'quantity' => 'required',
-            'user_id' => auth()->id(),
+            'quantity' => 'required'
         ]);
 
 
@@ -52,7 +51,13 @@ class ProductController extends ApiController
             return $this->sendError('Validation Error.', $validator->errors());
         }
 
-        $product = Product::create($input);
+
+        $product = new Product();
+        $product->title = $request->title;
+        $product->price = $request->price;
+        $product->quantity = $request->quantity;
+        $product->user_id = Auth::user()->id;
+        $product->save();
 
 
         return $this->sendResponse($product->toArray(), 'Product created successfully.');

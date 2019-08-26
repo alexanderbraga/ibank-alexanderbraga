@@ -64,4 +64,6 @@ I have this same problem:
 It occurs because the client for the API doesn't exists, maybe you removed it from the database when you ran the migrations refresh or something like that.
 You can create again the API clients manually or simply re-run the command:
 
+````
 php artisan passport:install
+````

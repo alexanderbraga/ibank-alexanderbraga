@@ -59,7 +59,7 @@ class ProductController extends ApiController
         $product->user_id = Auth::user()->id;
         $product->save();
 
-        if($product->save()){
+        if(!$product->save()){
             return$this->sendError('Create Error.', $validator->errors());
         }
 

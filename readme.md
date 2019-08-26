@@ -1,4 +1,4 @@
-## API iBank
+## APP iBank
 
 Primeiramente criei um usuario, após isso execute:\
 _First I created user, after that run:._
@@ -14,7 +14,8 @@ _After installing Passport_
 php artisan passport:install
 ```
 
-###### Routers URLS
+## API iBank
+
 
 Nesta API você deve definir dois Headers conforme listado abaixo:\
 _In this api you have to set two header as listed below:_
@@ -25,7 +26,7 @@ X-Requested-With: XMLHttpRequest
 ```
 <img src="https://i.ibb.co/7WVpv1x/Screenshot-33.png">
 
-
+###### Routers
 1. Singup
  - Method: POST
  - URL: http://localhost:8000/api/auth/signup

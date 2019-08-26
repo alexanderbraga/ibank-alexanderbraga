@@ -1,5 +1,17 @@
 ## API iBank
 
+Primeiramente criei um usuario, após isso excute:
+
+```
+php artisan db:seed
+```
+
+Instalar o Passport
+
+```
+php artisan passport:install
+```
+
 ###### Routers URLS
 
 >In this api you have to set two header as listed below:
